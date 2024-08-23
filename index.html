@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="text-white  bg-dark">
+
+<div class="container py-5">
+<h1>Product <span class="text-warning">Mangment</span> System</h1>
+<div class="form-group m-4">
+<label for="PrdName">Prodect Name </label>
+<input  oninput="validateName()" id="PrdName"  class="form-control"  placeholder="Enter your product name" type="text">
+<p id="invalidName" class=" text-danger d-none">please enter 4 capital letters</p>
+</div>
+
+<div class="form-group m-4">
+    <label for="PrdPrice">Prodect Price</label>
+   
+    <input  id="PrdPrice" oninput="validatePrice()"  class="form-control"  placeholder="Enter your product price"   type="number">
+    <p id="invalidPrice"  class=" text-danger d-none">please enter 4 digit number</p>
+</div>
+
+    <div class="form-group m-4">
+        <label for="PrdCat">Prodect Categry </label>
+        <input  id="PrdCat" oninput="validateCateg()" class="form-control" placeholder="Enter your product categry"   type="text">
+        <p id="invalidCat" class=" text-danger d-none">please enter 1 capital letters</p>
+    </div> 
+
+        <div class="form-group m-4">
+            <label for="PrdDes">Prodect Description</label>
+            <textarea  id="PrdDes" oninput="validateDesc()"  class="form-control" placeholder="Enter your describtion"  type="text"></textarea>
+            <p id="invalidDesc" class=" text-danger d-none">please enter 4 capital letters</p>
+        </div>
+
+            <button onclick="addProdect ()"    class="btn btn-outline-primary mt-2  m-4">Add Prodect </button>
+<BUtton class="btn btn-outline-success mt-2  m-4 d-none " id="saveBtn" onclick="saveUpdate()">Save Update</BUtton>
+<div class="form-group m-4">
+
+
+<input type="text"   oninput="searchProduct(this.value)"  class=" form-control  mt-2 " placeholder="  Search By Name"></div>
+
+
+
+
+
+            <table  class="table text-white text-center">
+                <thead>
+                <th>index</th>
+                <th>product name</th>
+                <th>product price</th>
+                <th>product categry</th>
+                <th>product description</th>
+                <th>Update</th>
+                <th>Delete</th>
+                </thead>
+               
+                <tbody id="demo">
+                
+                </tbody>
+</div>
+
+
+</table>
+       
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
